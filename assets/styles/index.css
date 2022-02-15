@@ -1,5 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #86BBD8;
+  color: #2F4858;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+  margin: 2vh 0;
+  padding: 2vh 4vh;
+}
+
+header h2 {
+  font-size: 2rem;
+}
+
+.game-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-container button {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 20px 50px;
+  margin: 2vh;
+  border-radius: 10px;
+  border: none;
+  background-color: #F6AE2D;
+  border-bottom: 5px solid #e6970a;
+  cursor: pointer;
+}
+
+.game-container button:active {
+  position: relative;
+  top: 5px;
+  border: none;
 }
 /*# sourceMappingURL=index.css.map */
