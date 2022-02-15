@@ -20,6 +20,7 @@ body {
 header {
     margin: 2vh 0;
     padding: 2vh 4vh;
+    height: 10vh;
 
     h2 {
         font-size: 2rem;
@@ -30,13 +31,34 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    height: 70vh;
+    
+
+    .info {
+        font-size: 1.4rem;
+    }
+
+    .quote {
+        font-size: 2rem;
+
+        &::before,
+        &::after {
+            position: relative;
+            font-size: 3rem;
+            margin: 0 3vh;
+            margin-bottom: 1vh;
+        }
+        &::before { content: '«'; }
+        &::after { content: '»'; }
+    }
 
     button {
         font-family: inherit;
         color: inherit;
         font-size: 1.5rem;
         padding: 20px 50px;
-        margin: 2vh;
+        margin: 2vh 4vh;
         border-radius: 10px;
         border: none;
         background-color: map-get($colors, secondary_0);
