@@ -39,8 +39,10 @@ header {
         font-size: 1.4rem;
     }
 
-    .quote {
+    #quote {
         font-size: 2rem;
+        max-width: 65ch;
+        text-align: center;
 
         &::before,
         &::after {

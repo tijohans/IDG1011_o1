@@ -46,22 +46,24 @@ header h2 {
   font-size: 1.4rem;
 }
 
-.game-container .quote {
+.game-container #quote {
   font-size: 2rem;
+  max-width: 65ch;
+  text-align: center;
 }
 
-.game-container .quote::before, .game-container .quote::after {
+.game-container #quote::before, .game-container #quote::after {
   position: relative;
   font-size: 3rem;
   margin: 0 3vh;
   margin-bottom: 1vh;
 }
 
-.game-container .quote::before {
+.game-container #quote::before {
   content: '«';
 }
 
-.game-container .quote::after {
+.game-container #quote::after {
   content: '»';
 }
 
