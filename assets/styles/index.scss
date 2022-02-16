@@ -67,6 +67,16 @@ header {
         border-bottom: 5px solid darken(map-get($colors, secondary_0), 10%);
         cursor: pointer;
 
+
+        // TODO: style these classes so they can be added to the right and wrong answers
+        .right-answer {
+            
+        }
+
+        .wrong-answer {
+
+        }
+
         &:active {
             position: relative;
             top: 5px;

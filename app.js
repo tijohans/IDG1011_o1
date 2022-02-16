@@ -82,7 +82,12 @@ const getQuoteOrigin = quote => {
 
 // TODO: This does not have any functionality at the moment, need to make getQuoteOrigin() work first
 const checkResult = (guess, quoteOrigin) => {
-    console.log(guess, quoteOrigin);
+    if(typeof guess !== 'string' || typeof quoteOrigin !== 'string') {
+        return 'Something wrong happened, try again';
+    }
+
+    // TODO: Check if guess and quoteOrigin is the same
+
 }
 
 
