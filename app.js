@@ -63,35 +63,26 @@ const getRandomQuote = _ => {
     return quotes[randomKey][randomIndex];
 }
 
-
-// const getQuoteOrigin = quote => {
-//     // origins is each key in quotes, using spread operator to get keys as an array
-//     const origins = [...Object.keys(quotes)];
-
-//     // Looking through each key for a match with the current quote
-//     origins.forEach(origin => {
-//         //return quotes[origin].includes(quote) ? true : false;
-//         // console.log(quotes[origin])
-//         // console.log(quotes[origin].includes(quote))
-//         if(quotes[origin].includes(quote)) {
-//             console.log(origin)
-//             return origin;
-//         }
-//     })
-// }
-
-// TODO: Make this function work, for now it just returns undefined or localhost adddress
+// TODO: Comments to explain this function
 const getQuoteOrigin = quote => {
+    const origins = [...Object.keys(quotes)];
     let quoteOrigin = '';
-    console.trace(origin)
-    return origin;
+
+    // Checking if 
+    origins.forEach(origin => {
+        if(quotes[origin].includes(quote)) {
+            //console.log(`${origin} includes the quote "${quote}"`)
+            quoteOrigin = origin;
+        }
+    })
+
+    // Returning the origin of the quote
+    return quoteOrigin;
 }
 
 // TODO: This does not have any functionality at the moment, need to make getQuoteOrigin() work first
-const checkResult = (answer, quoteOrigin) => {
-    // console.log(answer);
-    // console.log(quoteOrigin)
-    console.log(answer, quoteOrigin);
+const checkResult = (guess, quoteOrigin) => {
+    console.log(guess, quoteOrigin);
 }
 
 
