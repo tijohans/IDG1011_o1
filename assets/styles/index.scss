@@ -33,7 +33,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     height: 70vh;
-    
+
 
     .info {
         font-size: 1.4rem;
@@ -51,8 +51,14 @@ header {
             margin: 0 3vh;
             margin-bottom: 1vh;
         }
-        &::before { content: '«'; }
-        &::after { content: '»'; }
+
+        &::before {
+            content: '«';
+        }
+
+        &::after {
+            content: '»';
+        }
     }
 
     button {
@@ -67,20 +73,26 @@ header {
         border-bottom: 5px solid darken(map-get($colors, secondary_0), 10%);
         cursor: pointer;
 
-
-        // TODO: style these classes so they can be added to the right and wrong answers
-        .right-answer {
-            
-        }
-
-        .wrong-answer {
-
-        }
-
-        &:active {
+        &:active,
+        &.right-answer:active,
+        &.wrong-answer:active {
             position: relative;
             top: 5px;
             border: none;
         }
+
+        // TODO: style these classes so they can be added to the right and wrong answers
+        &.right-answer {
+            background-color: map-get($colors, win-color);
+            border-bottom: 5px solid darken(map-get($colors, win-color), 10%);
+        }
+
+        &.wrong-answer {
+            background-color: map-get($colors, loss-color);
+            border-bottom: 5px solid darken(map-get($colors, loss-color), 10%);
+        }
     }
 }
+
+
+

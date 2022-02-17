@@ -33,7 +33,7 @@ const quotes = {
         "I just threw some kazoo on this bitch",
         "Man.. whatever happened to my antique fish tank?"
     ],
-    "tshirtQuotes": [
+    "t-shirtQuotes": [
         "Be danced, or dance",
         "Who the fuck is jesus?",
         "I don't need life I'm high on drugs",
@@ -64,13 +64,14 @@ const getRandomQuote = _ => {
 }
 
 // TODO: Comments to explain this function
+// Takes the current quote in as a parameter, and then uses.includes to check which key the quote belongs to
 const getQuoteOrigin = quote => {
     const origins = [...Object.keys(quotes)];
     let quoteOrigin = '';
 
     // Checking if 
     origins.forEach(origin => {
-        if(quotes[origin].includes(quote)) {
+        if (quotes[origin].includes(quote)) {
             //console.log(`${origin} includes the quote "${quote}"`)
             quoteOrigin = origin;
         }
@@ -82,12 +83,43 @@ const getQuoteOrigin = quote => {
 
 // TODO: This does not have any functionality at the moment, need to make getQuoteOrigin() work first
 const checkResult = (guess, quoteOrigin) => {
-    if(typeof guess !== 'string' || typeof quoteOrigin !== 'string') {
+    if (typeof guess !== 'string' || typeof quoteOrigin !== 'string') {
         return 'Something wrong happened, try again';
     }
 
     // TODO: Check if guess and quoteOrigin is the same
-
+    if (quoteOrigin.includes(guess)) {
+        const result = quoteOrigin.includes(guess);
+        switch (guess) {
+            case 'gibby':
+                gibbyBtn.classList.add('right-answer');
+                kanyeBtn.classList.add('wrong-answer');
+                tshirtBtn.classList.add('wrong-answer');
+                return result;
+            case 'kanye':
+                kanyeBtn.classList.add('right-answer');
+                gibbyBtn.classList.add('wrong-answer');
+                tshirtBtn.classList.add('wrong-answer');
+                return result;
+            case 't-shirt':
+                tshirtBtn.classList.add('right-answer');
+                gibbyBtn.classList.add('wrong-answer');
+                kanyeBtn.classList.add('wrong-answer');
+                return result;
+        }
+    } else {
+        switch (guess) {
+            case 'gibby':
+                gibbyBtn.classList.add('wrong-answer');
+                return
+            case 'kanye':
+                kanyeBtn.classList.add('wrong-answer');
+                return
+            case 't-shirt':
+                tshirtBtn.classList.add('wrong-answer');
+                return
+        }
+    }
 }
 
 
@@ -99,7 +131,7 @@ const initializeGame = _ => {
     // Adding onClick event on all buttons
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-            //console.log(`${btn.innerHTML.toLowerCase()} has been clicked`)
+            console.log(`${btn.innerHTML.toLowerCase()} has been clicked`)
             checkResult(btn.innerHTML.toLowerCase(), getQuoteOrigin(quote));
         });
     })

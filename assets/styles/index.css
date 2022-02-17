@@ -80,9 +80,19 @@ header h2 {
   cursor: pointer;
 }
 
-.game-container button:active {
+.game-container button:active, .game-container button.right-answer:active, .game-container button.wrong-answer:active {
   position: relative;
   top: 5px;
   border: none;
+}
+
+.game-container button.right-answer {
+  background-color: #86E2A8;
+  border-bottom: 5px solid #5dd88a;
+}
+
+.game-container button.wrong-answer {
+  background-color: #FFAA98;
+  border-bottom: 5px solid #ff8065;
 }
 /*# sourceMappingURL=index.css.map */
