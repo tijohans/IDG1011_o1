@@ -61,38 +61,47 @@ header {
         }
     }
 
-    button {
-        font-family: inherit;
-        color: inherit;
-        font-size: 1.5rem;
-        padding: 20px 50px;
-        margin: 2vh 4vh;
-        border-radius: 10px;
-        border: none;
-        background-color: map-get($colors, secondary_0);
-        border-bottom: 5px solid darken(map-get($colors, secondary_0), 10%);
-        cursor: pointer;
+    .choices {
 
-        &:active,
-        &.right-answer:active,
-        &.wrong-answer:active {
-            position: relative;
-            top: 5px;
+        button {
+            font-family: inherit;
+            color: inherit;
+            font-size: 1.5rem;
+            padding: 20px 50px;
+            margin: 2vh 4vh;
+            border-radius: 10px;
             border: none;
-        }
+            background-color: map-get($colors, secondary_0);
+            border-bottom: 5px solid darken(map-get($colors, secondary_0), 10%);
+            cursor: pointer;
 
-        // TODO: style these classes so they can be added to the right and wrong answers
-        &.right-answer {
-            background-color: map-get($colors, win-color);
-            border-bottom: 5px solid darken(map-get($colors, win-color), 10%);
-        }
+            &:active,
+            &.right-answer:active,
+            &.wrong-answer:active {
+                position: relative;
+                top: 5px;
+                border: none;
+            }
 
-        &.wrong-answer {
-            background-color: map-get($colors, loss-color);
-            border-bottom: 5px solid darken(map-get($colors, loss-color), 10%);
+            &.right-answer {
+                background-color: map-get($colors, win-color);
+                border-bottom: 5px solid darken(map-get($colors, win-color), 10%);
+            }
+
+            &.wrong-answer {
+                background-color: map-get($colors, loss-color);
+                border-bottom: 5px solid darken(map-get($colors, loss-color), 10%);
+            }
         }
     }
 }
 
+.restart {
+    position: absolute;
+    display: none;
 
-
+    &.show {
+        display: block;
+        position: absolute;
+    }
+}

@@ -67,7 +67,7 @@ header h2 {
   content: '»';
 }
 
-.game-container button {
+.game-container .choices button {
   font-family: inherit;
   color: inherit;
   font-size: 1.5rem;
@@ -80,19 +80,29 @@ header h2 {
   cursor: pointer;
 }
 
-.game-container button:active, .game-container button.right-answer:active, .game-container button.wrong-answer:active {
+.game-container .choices button:active, .game-container .choices button.right-answer:active, .game-container .choices button.wrong-answer:active {
   position: relative;
   top: 5px;
   border: none;
 }
 
-.game-container button.right-answer {
+.game-container .choices button.right-answer {
   background-color: #86E2A8;
   border-bottom: 5px solid #5dd88a;
 }
 
-.game-container button.wrong-answer {
+.game-container .choices button.wrong-answer {
   background-color: #FFAA98;
   border-bottom: 5px solid #ff8065;
+}
+
+.restart {
+  position: absolute;
+  display: none;
+}
+
+.restart.show {
+  display: block;
+  position: absolute;
 }
 /*# sourceMappingURL=index.css.map */
