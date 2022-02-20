@@ -28,6 +28,7 @@ header {
 }
 
 .welcome-screen {
+    // Setting background to an svg image.
     background: url(/assets/svg/blob-scene-haikei.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -63,6 +64,7 @@ header {
 
 .welcome-screen,
 #game-container {
+    // Aspect ratio used for the SVG backrgound images. Keeps them in proportion
     aspect-ratio: 16/9;
     width: 100vw;
     height: 100vh;
@@ -149,7 +151,7 @@ button {
     width: 60vw;
 
     background-color: rgba($color: map-get($colors, primary_1), $alpha: 0.15);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     border-radius: 25px;
 
     &.show {

@@ -65,16 +65,17 @@ const getRandomQuote = _ => {
     return quotes[randomKey][randomIndex];
 }
 
-// TODO: Comments to explain this function
-// Takes the current quote in as a parameter, and then uses.includes to check which key the quote belongs to
+// Takes the current quote in as a parameter, and then uses .includes to check which key the quote belongs to
 const getQuoteOrigin = quote => {
+    // Creates the const origins, with all the keys in the object, spread out in an array.
     const origins = [...Object.keys(quotes)];
+
     let quoteOrigin = '';
 
-    // Checking if 
+    // Checking each origins array, and uses .includes to check each array for a match.
     origins.forEach(origin => {
         if (quotes[origin].includes(quote)) {
-            //console.log(`${origin} includes the quote "${quote}"`)
+            // Sets the var quoteOrigin declared above to the origin the quote comes from.
             quoteOrigin = origin;
         }
     })
@@ -83,11 +84,15 @@ const getQuoteOrigin = quote => {
     return quoteOrigin;
 }
 
+// Function for checking win conditon. Takes in the guess the player presesed, and the origin of the quote.
 const checkResult = (guess, quoteOrigin) => {
+    // Handling cases in which the parameters are not of wanted type.
     if (typeof guess !== 'string' || typeof quoteOrigin !== 'string') {
         return 'Something wrong happened, try again';
     }
 
+    // Checks the string quoteOrigin if it includes the guess.
+    // The switch statement inside check the guess and then styles the elements appropriately, also makes the restart button show
     if (quoteOrigin.includes(guess)) {
         const result = quoteOrigin.includes(guess);
         switch (guess) {
@@ -125,6 +130,12 @@ const checkResult = (guess, quoteOrigin) => {
     }
 }
 
+restartBtn.addEventListener('click', () => {
+    location.reload();
+})
+
+
+// Initializes the game, only function which is called when site loads in.
 const initializeGame = _ => {
     // Getting a random quote and displaying it in the quote display
     const quote = getRandomQuote();
@@ -139,8 +150,6 @@ const initializeGame = _ => {
     })
 }
 
-restartBtn.addEventListener('click', () => {
-    location.reload();
-})
+
 
 initializeGame();
