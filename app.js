@@ -120,6 +120,10 @@ const checkResult = (guess, quoteOrigin) => {
     }
 }
 
+const restartGame = _ => {
+    
+}
+
 
 const initializeGame = _ => {
     // Getting a random quote and displaying it in the quote display

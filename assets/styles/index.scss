@@ -46,6 +46,19 @@ header {
             margin: 2vh 0;
         }
     }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
 }
 
 .welcome-screen,
@@ -129,7 +142,11 @@ button {
 
 .restart {
     position: absolute;
+    
     display: none;
+    background-color: #FFF;
+    height: 30vh;
+    width: 30vw;
 
     &.show {
         display: block;

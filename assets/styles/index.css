@@ -12,7 +12,6 @@ html {
 
 body {
   background-color: #F8FFE5;
-  color: #000;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -53,6 +52,19 @@ header h2 {
 
 .welcome-screen .info > * {
   margin: 2vh 0;
+}
+
+.welcome-screen a {
+  text-decoration: none;
+  color: #000;
+}
+
+.welcome-screen h1 {
+  font-size: 2.2rem;
+}
+
+.welcome-screen p {
+  font-size: 1.2rem;
 }
 
 .welcome-screen,
@@ -139,6 +151,9 @@ button.wrong-answer {
 .restart {
   position: absolute;
   display: none;
+  background-color: #FFF;
+  height: 30vh;
+  width: 30vw;
 }
 
 .restart.show {
