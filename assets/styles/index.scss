@@ -41,8 +41,8 @@ header {
     .info {
         height: 30vh;
         max-width: 60ch;
-        
-        & > * {
+
+        &>* {
             margin: 2vh 0;
         }
     }
@@ -141,15 +141,21 @@ button {
 }
 
 .restart {
-    position: absolute;
-    
     display: none;
-    background-color: #FFF;
-    height: 30vh;
-    width: 30vw;
+    position: absolute;
+    top: 142vh;
+
+    height: 40vh;
+    width: 60vw;
+
+    background-color: rgba($color: map-get($colors, primary_1), $alpha: 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
 
     &.show {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
     }
 }

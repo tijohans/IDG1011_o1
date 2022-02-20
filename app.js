@@ -4,6 +4,8 @@ const kanyeBtn = document.getElementById('kanye');
 const tshirtBtn = document.getElementById('tshirt')
 const quoteDisplay = document.getElementById('quote');
 const buttons = document.querySelectorAll('.btn');
+const restartScreen = document.querySelector('.restart')
+const restartBtn = document.querySelector('.restartBtn');
 
 // Object containing all quotes. Key is place of origin, containing an array of all quotes from said origin
 const quotes = {
@@ -93,16 +95,19 @@ const checkResult = (guess, quoteOrigin) => {
                 gibbyBtn.classList.add('right-answer');
                 kanyeBtn.classList.add('wrong-answer');
                 tshirtBtn.classList.add('wrong-answer');
+                restartScreen.classList.add('show');
                 return result;
             case 'kanye':
                 kanyeBtn.classList.add('right-answer');
                 gibbyBtn.classList.add('wrong-answer');
                 tshirtBtn.classList.add('wrong-answer');
+                restartScreen.classList.add('show');
                 return result;
             case 't-shirt':
                 tshirtBtn.classList.add('right-answer');
                 gibbyBtn.classList.add('wrong-answer');
                 kanyeBtn.classList.add('wrong-answer');
+                restartScreen.classList.add('show');
                 return result;
         }
     } else {
@@ -120,11 +125,6 @@ const checkResult = (guess, quoteOrigin) => {
     }
 }
 
-const restartGame = _ => {
-    
-}
-
-
 const initializeGame = _ => {
     // Getting a random quote and displaying it in the quote display
     const quote = getRandomQuote();
@@ -138,5 +138,9 @@ const initializeGame = _ => {
         });
     })
 }
+
+restartBtn.addEventListener('click', () => {
+    location.reload();
+})
 
 initializeGame();
