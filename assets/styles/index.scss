@@ -8,11 +8,12 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: map-get($colors, primary_0);
-    color: map-get($colors, primary_1);
+    color: #000;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -27,15 +28,47 @@ header {
     }
 }
 
-.game-container {
+.welcome-screen {
+    background: url(/assets/svg/blob-scene-haikei.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .info {
+        height: 30vh;
+        max-width: 60ch;
+        
+        & > * {
+            margin: 2vh 0;
+        }
+    }
+}
+
+.welcome-screen,
+#game-container {
+    aspect-ratio: 16/9;
+    width: 100vw;
+    height: 100vh;
+}
+
+#game-container {
+    background: url(/assets/svg/blob-scene-haikei-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 70vh;
 
 
-    .info {
+    .question {
         font-size: 1.4rem;
     }
 
@@ -61,38 +94,37 @@ header {
         }
     }
 
-    .choices {
 
-        button {
-            font-family: inherit;
-            color: inherit;
-            font-size: 1.5rem;
-            padding: 20px 50px;
-            margin: 2vh 4vh;
-            border-radius: 10px;
-            border: none;
-            background-color: map-get($colors, secondary_0);
-            border-bottom: 5px solid darken(map-get($colors, secondary_0), 10%);
-            cursor: pointer;
+}
 
-            &:active,
-            &.right-answer:active,
-            &.wrong-answer:active {
-                position: relative;
-                top: 5px;
-                border: none;
-            }
+button {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+    padding: 20px 50px;
+    margin: 2vh 4vh;
+    border-radius: 10px;
+    border: none;
+    background-color: map-get($colors, secondary_0);
+    cursor: pointer;
+    border-bottom: 5px solid darken(map-get($colors, secondary_0), 10%);
 
-            &.right-answer {
-                background-color: map-get($colors, win-color);
-                border-bottom: 5px solid darken(map-get($colors, win-color), 10%);
-            }
+    &:active,
+    &.right-answer:active,
+    &.wrong-answer:active {
+        position: relative;
+        top: 5px;
+        border: none;
+    }
 
-            &.wrong-answer {
-                background-color: map-get($colors, loss-color);
-                border-bottom: 5px solid darken(map-get($colors, loss-color), 10%);
-            }
-        }
+    &.right-answer {
+        background-color: map-get($colors, win-color);
+        border-bottom: 5px solid darken(map-get($colors, win-color), 10%);
+    }
+
+    &.wrong-answer {
+        background-color: map-get($colors, loss-color);
+        border-bottom: 5px solid darken(map-get($colors, loss-color), 10%);
     }
 }
 
@@ -103,5 +135,19 @@ header {
     &.show {
         display: block;
         position: absolute;
+    }
+}
+
+footer {
+    background-color: map-get($colors, primary_1);
+    color: #FFF;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 1vh;
     }
 }

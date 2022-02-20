@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/index.css">
     <script src="quotes.json" defer></script>
-    <script src="main.js" defer></script>
+    <script src="app.js" defer></script>
     <title>GKT</title>
 </head>
+
 <body>
-    <header>
-        <h2>GKT</h2>
-    </header>
-    <main class="game-container">
-        <h2 class="info">Is this sentence a Gibby quote, Kanye tweet or a poorly translated t-shirt?</h2>
-        <h1 id="quote"></h1>
-        <div class="choices">
-            <button id="gibby" class="btn">Gibby</button>
-            <button id="kanye" class="btn">Kanye</button>
-            <button id="tshirt" class="btn">T-shirt</button>
-        </div>
-        <button class="restart show">Restart</button>
+    <main>
+        <section class="welcome-screen">
+            <div class="info">
+                <h1>Welcome to GKT</h1>
+                <p>Welcome to GKT! The game were you guess wether the sentence shown is either a Gibby quote, a Kanye
+                    tweet or a poorly translated t-shirt. You will be presented with a sentence, and your job is to
+                    figure out the source of the sentence.</p>
+                <button><a href="#game-container">To Game</a></button>
+            </div>
+        </section>
+
+        <section id="game-container">
+            <h2 class="question">Is this sentence a Gibby quote, Kanye tweet or a poorly translated t-shirt?</h2>
+            <h1 id="quote"></h1>
+            <div class="choices">
+                <button id="gibby" class="btn">Gibby</button>
+                <button id="kanye" class="btn">Kanye</button>
+                <button id="tshirt" class="btn">T-shirt</button>
+            </div>
+            <button class="restart">Restart</button>
+        </section>
     </main>
+    <footer>
+        <p>Created as a part of the course IDG1011</p>
+        <p>Created by Thor Ivar Nirisen Johansen</p>
+        <p>First year student, Bachelor in Web development</p>
+    </footer>
 </body>
+
 </html>

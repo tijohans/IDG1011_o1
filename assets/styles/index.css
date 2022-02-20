@@ -7,11 +7,12 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #86BBD8;
-  color: #2F4858;
+  background-color: #F8FFE5;
+  color: #000;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -25,7 +26,47 @@ header h2 {
   font-size: 2rem;
 }
 
-.game-container {
+.welcome-screen {
+  background: url(/assets/svg/blob-scene-haikei.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.welcome-screen .info {
+  height: 30vh;
+  max-width: 60ch;
+}
+
+.welcome-screen .info > * {
+  margin: 2vh 0;
+}
+
+.welcome-screen,
+#game-container {
+  aspect-ratio: 16/9;
+  width: 100vw;
+  height: 100vh;
+}
+
+#game-container {
+  background: url(/assets/svg/blob-scene-haikei-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,35 +80,34 @@ header h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 70vh;
 }
 
-.game-container .info {
+#game-container .question {
   font-size: 1.4rem;
 }
 
-.game-container #quote {
+#game-container #quote {
   font-size: 2rem;
   max-width: 65ch;
   text-align: center;
 }
 
-.game-container #quote::before, .game-container #quote::after {
+#game-container #quote::before, #game-container #quote::after {
   position: relative;
   font-size: 3rem;
   margin: 0 3vh;
   margin-bottom: 1vh;
 }
 
-.game-container #quote::before {
+#game-container #quote::before {
   content: '«';
 }
 
-.game-container #quote::after {
+#game-container #quote::after {
   content: '»';
 }
 
-.game-container .choices button {
+button {
   font-family: inherit;
   color: inherit;
   font-size: 1.5rem;
@@ -75,25 +115,25 @@ header h2 {
   margin: 2vh 4vh;
   border-radius: 10px;
   border: none;
-  background-color: #f6ae2d;
-  border-bottom: 5px solid #e6970a;
+  background-color: #FFC43D;
   cursor: pointer;
+  border-bottom: 5px solid #ffb40a;
 }
 
-.game-container .choices button:active, .game-container .choices button.right-answer:active, .game-container .choices button.wrong-answer:active {
+button:active, button.right-answer:active, button.wrong-answer:active {
   position: relative;
   top: 5px;
   border: none;
 }
 
-.game-container .choices button.right-answer {
-  background-color: #86E2A8;
-  border-bottom: 5px solid #5dd88a;
+button.right-answer {
+  background-color: #06D6A0;
+  border-bottom: 5px solid #05a47b;
 }
 
-.game-container .choices button.wrong-answer {
-  background-color: #FFAA98;
-  border-bottom: 5px solid #ff8065;
+button.wrong-answer {
+  background-color: #EF476F;
+  border-bottom: 5px solid #eb184a;
 }
 
 .restart {
@@ -104,5 +144,28 @@ header h2 {
 .restart.show {
   display: block;
   position: absolute;
+}
+
+footer {
+  background-color: #1B9AAA;
+  color: #FFF;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  margin: 1vh;
 }
 /*# sourceMappingURL=index.css.map */
