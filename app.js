@@ -129,6 +129,8 @@ const getQuoteOrigin = quote => {
 
 // Function for checking win conditon. Takes in the guess the player presesed, and the origin of the quote.
 const checkResult = (guess, quoteOrigin) => {
+    console.log(`The guess is: ${guess}, and the quote origin is: ${quoteOrigin}`);
+
     // Handling cases in which the parameters are not of wanted type.
     if (typeof guess !== 'string' || typeof quoteOrigin !== 'string') {
         return 'Something wrong happened, try again';
@@ -173,6 +175,7 @@ const checkResult = (guess, quoteOrigin) => {
     }
 }
 
+// Refreshing the page when the restart button is pressed.
 restartBtn.addEventListener('click', () => {
     location.reload();
 })
@@ -187,7 +190,6 @@ const initializeGame = _ => {
     // Adding onClick event on all buttons
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-            console.log(`${btn.innerHTML.toLowerCase()} has been clicked`)
             checkResult(btn.innerHTML.toLowerCase(), getQuoteOrigin(quote));
         });
     })
