@@ -49,6 +49,7 @@ How the buttons are colored is by using `classlist.add()` and then appending the
 ### Sources
 
 https://app.haikei.app/
+
 https://coolors.co/generate/
 
 I first used coolors to generate a color pallette for my site, and then I used haikei to generate the svg's used on the background with the colora pallette I created.
