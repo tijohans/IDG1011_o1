@@ -10,21 +10,9 @@ This game is created as part of the course IDG1011 Front End development for the
 
 This website consists of several files, the file structure is as follows: 
 
-* index.html
-* app.js
-* assets
-    * styles 
-        * index.css
-        * index.scss
-        * _colors.scss
-        * index.css.map
-    * svg
-        * blob-scene-haikei.svg
-        * blob-scene-haikei-2.svg
-* IDG1011_flowchart.pdf
-
 ```
 IDG1011_o1_tijohans
+│
 │   app.js
 │   IDG1011_flowchart.pdf
 │   index.html
