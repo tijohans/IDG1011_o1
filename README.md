@@ -23,6 +23,26 @@ This website consists of several files, the file structure is as follows:
         * blob-scene-haikei-2.svg
 * IDG1011_flowchart.pdf
 
+```
+IDG1011_o1_tijohans
+│   app.js
+│   IDG1011_flowchart.pdf
+│   index.html
+│   README.md
+│
+└───assets
+    │
+    └───styles
+    │   │   _colors.scss
+    │   │   index.css
+    │   │   index.css.map
+    │   │   index.scss
+    │
+    └───svg
+    │   blob-scene-haikei.svg
+    │   blob-scene-haikei-2.svg
+```
+
 ### app.js
 
 The app.js file contains all the functionality of the website. This is where the flowchart.pdf is put into practice. One of the first things in the script file is an object with all the quotes. The key in the object is the origin of the quote, and each key contains an array of quotes. This object is used to get the random quote, and to check the origin of the quote. 
