@@ -113,7 +113,8 @@ const getQuoteOrigin = quote => {
     // Creates the const origins, with all the keys in the object, spread out in an array.
     const origins = [...Object.keys(quotes)];
 
-    let quoteOrigin = '';
+    // Creating an empty variable that is going to be used to store the origin of the quote.
+    let quoteOrigin;
 
     // Checking each origins array, and uses .includes to check each array for a match.
     origins.forEach(origin => {
@@ -187,7 +188,8 @@ const initializeGame = _ => {
     const quote = getRandomQuote();
     quoteDisplay.innerHTML = quote;
 
-    // Adding onClick event on all buttons
+    // Adding onClick event on all buttons. 
+    // The onClick event calls checkResult() with the content of the button as the first parameter, and the quoteOrigin as the second parameter.
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
             checkResult(btn.innerHTML.toLowerCase(), getQuoteOrigin(quote));
