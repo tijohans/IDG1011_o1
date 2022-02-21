@@ -8,6 +8,9 @@ This game is created as part of the course IDG1011 Front End development for the
 
 ## Description 
 
+
+### File structure
+
 This website consists of several files, the file structure is as follows: 
 
 ```
