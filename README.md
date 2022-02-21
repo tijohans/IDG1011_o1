@@ -12,7 +12,6 @@ This website consists of several files, the file structure is as follows:
 
 ```
 IDG1011_o1_tijohans
-│
 │   app.js
 │   IDG1011_flowchart.pdf
 │   index.html
@@ -27,8 +26,8 @@ IDG1011_o1_tijohans
     │   │   index.scss
     │
     └───svg
-    │   blob-scene-haikei.svg
-    │   blob-scene-haikei-2.svg
+        │   blob-scene-haikei.svg
+        │   blob-scene-haikei-2.svg
 ```
 
 ### app.js
