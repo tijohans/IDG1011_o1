@@ -58,6 +58,8 @@ How the buttons are colored is by using `classlist.add()` and then appending the
 
 ### Sources
 
+https://github.com/tijohans/IDG1011_o1
+
 https://app.haikei.app/
 
 https://coolors.co/generate/
