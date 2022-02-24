@@ -60,6 +60,11 @@ How the buttons are colored is by using `classlist.add()` and then appending the
 
 https://github.com/tijohans/IDG1011_o1
 
+https://folk.ntnu.no/tijohans/IDG1011_o1/
+
+I have uploaded this assignment to github and on out folk site.
+
+
 https://app.haikei.app/
 
 https://coolors.co/generate/
