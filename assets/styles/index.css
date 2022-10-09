@@ -12,7 +12,7 @@ html {
 
 body {
   background-color: #F8FFE5;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 header {
@@ -20,7 +20,6 @@ header {
   padding: 2vh 4vh;
   height: 10vh;
 }
-
 header h2 {
   font-size: 2rem;
 }
@@ -30,39 +29,25 @@ header h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .welcome-screen .info {
   height: 30vh;
   max-width: 60ch;
 }
-
 .welcome-screen .info > * {
   margin: 2vh 0;
 }
-
 .welcome-screen a {
   text-decoration: none;
   color: #000;
 }
-
 .welcome-screen h1 {
   font-size: 2.2rem;
 }
-
 .welcome-screen p {
   font-size: 1.2rem;
 }
@@ -79,44 +64,30 @@ header h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
 #game-container .question {
   font-size: 1.4rem;
 }
-
 #game-container #quote {
   font-size: 2rem;
   max-width: 65ch;
   text-align: center;
 }
-
 #game-container #quote::before, #game-container #quote::after {
   position: relative;
   font-size: 3rem;
   margin: 0 3vh;
   margin-bottom: 1vh;
 }
-
 #game-container #quote::before {
-  content: '«';
+  content: "«";
 }
-
 #game-container #quote::after {
-  content: '»';
+  content: "»";
 }
 
 button {
@@ -131,18 +102,15 @@ button {
   cursor: pointer;
   border-bottom: 5px solid #ffb40a;
 }
-
 button:active, button.right-answer:active, button.wrong-answer:active {
   position: relative;
   top: 5px;
   border: none;
 }
-
 button.right-answer {
   background-color: #06D6A0;
   border-bottom: 5px solid #05a47b;
 }
-
 button.wrong-answer {
   background-color: #EF476F;
   border-bottom: 5px solid #eb184a;
@@ -159,17 +127,10 @@ button.wrong-answer {
           backdrop-filter: blur(3px);
   border-radius: 25px;
 }
-
 .restart.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
 }
 
@@ -177,22 +138,11 @@ footer {
   background-color: #1B9AAA;
   color: #FFF;
   height: 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 footer p {
   margin: 1vh;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
